@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crud Operation</title>
+  </head>
+  <body>
+    <div class="crud">
+      <header class="header">
+        <h1 class="title m-0">
+          <i class="fa-solid fa-c"></i><i class="fa-solid fa-registered"></i
+          ><i class="fa-duotone fa-u"></i
+          ><i class="fa-solid fa-u fa-rotate-270"></i>
+        </h1>
+        <p class="para">product store</p>
+      </header>
+
+      <div class="inputs">
+        <form class="row g-3 d-flex flex-column">
+          <div class="col-md-4 mw-100 my-2">
+            <label for="name" class="form-label"
+              >product name <span>*</span></label
+            >
+            <input type="text" class="form-control" id="namee" required  />
+            <div class="valid-feedback">Success</div>
+          </div>
+          <div class="col-md-4 mw-100 my-2">
+            <label for="validationServer02" class="form-label"
+              >product category <span>*</span></label
+            >
+            <input type="text" class="form-control" id="category"  />
+            <div class="valid-feedback">Success</div>
+          </div>
+          <div class="col-md-4 mw-100 my-2">
+            <label for="validationServer02" class="form-label"
+              >product price <span>*</span></label
+            >
+            <input type="number" class="form-control" id="price" required  />
+            <div class="valid-feedback">Success</div>
+          </div>
+          <div class="form-group">
+            <label for="description">product description <span>*</span></label>
+            <textarea
+              class="form-control"
+              id="description"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <button class="btno">add product</button>
+        </form>
+      </div>
+
+      <div class="outputs">
+        <div class="input-group rounded">
+          <input
+            type="search"
+            id="search"
+            onkeyup="searchData(this.value)"
+            class="form-control rounded"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="search-addon"
+          />
+          <span>
+            <div class="fas fa-times"></div>
+          </span>
+        </div>
+
+        <table>
+          <tr class="table-head">
+            <th>id</th>
+            <th>name</th>
+            <th>category</th>
+            <th>price</th>
+            <th>description</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tbody id="tbody">
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="bootstrap.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

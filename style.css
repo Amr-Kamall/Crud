@@ -1,0 +1,143 @@
+* {
+  text-transform: capitalize;
+}
+.crud {
+  width: 100%;
+  margin: auto;
+}
+
+.crud .header {
+  text-align: center;
+  width: 100%;
+}
+.crud form {
+  width: 80%;
+  margin: auto;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.crud .header .title {
+  letter-spacing: 2px;
+  background: rgb(69, 127, 94);
+  width: 100%;
+  color: #fff;
+  padding-top: 10px;
+  height: 70px;
+}
+
+.crud .header .para {
+  background: rgb(220, 217, 217);
+  font-size: 15px;
+  color: rgb(34, 132, 76);
+  padding: 0;
+}
+
+.crud form label {
+  margin-bottom: 0;
+}
+
+.crud form label span {
+  color: rgb(255, 0, 0);
+}
+.crud form .form-group {
+  margin-top: 15px;
+}
+.crud form .form-group label {
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+
+.crud form .form-group textarea {
+  width: 98%;
+  margin-left: 15px;
+  resize: none;
+  height: 120px;
+}
+.btno {
+  border: none;
+  outline: none;
+  width: 120px;
+  padding: 7px 7px;
+  margin: auto;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 20px;
+  background: rgb(69, 127, 94);
+  color: #fff;
+  transition: .4s;
+  border: 2px solid rgb(69, 127, 94);
+  font-weight: 500;
+  font-size:15px;
+}
+
+.crud form .btno:hover{
+    background:#fff;
+    color:rgb(49, 92, 68);
+    border: 2px solid rgb(69, 127, 94);
+}
+
+.crud .outputs {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  overflow: hidden;
+}
+
+.crud .outputs input {
+  position: relative;
+}
+
+.crud .outputs span {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  color: rgb(34, 132, 76);
+  z-index: 9;
+  display:none;
+}
+
+.crud .outputs table{
+    width:100%;
+    text-align:center;
+    margin:15px 0;
+    padding:20px 0;
+    text-transform: capitalize;
+}
+
+.crud .outputs table .table-head{
+    background:rgb(69, 127, 94);
+    color:#fff;
+    height:50px;
+}
+
+th,td{
+    padding:10px;
+}
+
+.btn-delete,.btn-update{
+    background:transparent;
+    color:rgb(202, 28, 28);
+    border: 2px solid rgb(202, 28, 28);
+    padding: 3px 12px;
+    text-transform: capitalize;
+    outline:none;
+    font-weight:500;
+    cursor:pointer;
+    transition: .4s;
+    
+}
+.btn-update{
+    border: 2px solid rgb(69, 127, 94);
+    color:rgb(69, 127, 94);
+}
+.btn-delete:hover{
+    background:rgb(202, 28, 28);
+    color:#fff;
+}
+.btn-update:hover{
+    background:rgb(69, 127, 94);
+    color:#fff;
+}
