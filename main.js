@@ -6,16 +6,12 @@ let category = document.querySelector(".crud .inputs #category");
 let price = document.querySelector(".crud .inputs #price");
 let description = document.querySelector(".crud .inputs #description");
 
-
 let btno = document.querySelector(".btno");
 let search = document.querySelector(".crud .outputs input");
 
 let form = document.querySelector(".crud .inputs form");
 
-
 let tmp;
-
-
 
 //create
 let dataPro;
@@ -33,18 +29,19 @@ btno.addEventListener("click", function () {
     description: description.value,
   };
 
-  if(namee.value !="" && category.value !="" && price.value !="" && description.value != ""){
-    
-      if (this.innerHTML == "add product") {
-        dataPro.push(newPro);
-      } else {
-        //btno.innerHTML = "update"
-        dataPro[tmp] = newPro;
-      }  
-    
-    
+  if (
+    namee.value != "" &&
+    category.value != "" &&
+    price.value != "" &&
+    description.value != ""
+  ) {
+    if (this.innerHTML == "add product") {
+      dataPro.push(newPro);
+    } else {
+      //btno.innerHTML = "update"
+      dataPro[tmp] = newPro;
+    }
   }
-  
 
   localStorage.setItem("product", JSON.stringify(dataPro));
 
@@ -85,7 +82,7 @@ function updateData(i) {
     top: 0,
     behavior: "smooth",
   });
-  search.value = ""; 
+  search.value = "";
 }
 
 // delete
@@ -93,15 +90,15 @@ function deleteData(i) {
   dataPro.splice(i, 1);
   localStorage.product = JSON.stringify(dataPro);
   readData(); //we use this function to reload page to remove any item you want
-  search.value = ""; 
+  search.value = "";
 }
 
-
 //search
-function searchData(value){
-  let table = '';
-  for(let i = 0; i<dataPro.length; i++){
-    if(dataPro[i].namee.includes(value)){
+function searchData(value) {
+  console.log(value);
+  let table = "";
+  for (let i = 0; i < dataPro.length; i++) {
+    if (dataPro[i].namee.includes(value)) {
       table += `
           <tr>
             <td>${i}</td>
@@ -117,8 +114,6 @@ function searchData(value){
   }
   document.querySelector("#tbody").innerHTML = table;
 }
-
-
 
 search.addEventListener("keyup", function () {
   if (search.value != "") {
